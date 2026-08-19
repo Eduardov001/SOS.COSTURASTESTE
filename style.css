@@ -1,0 +1,931 @@
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f8f4f0;
+    color: #333;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+
+
+
+h1,
+h2,
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+nav a,
+header p {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 15px;
+    padding: 20px 20px 20px 140px;
+
+    background: linear-gradient(
+        90deg,
+         rgba(228, 150, 5, 0.486) 0%,
+        rgba(255, 162, 0, 0.774) 50%,
+        rgba(197, 160, 89, 0.25) 100%
+    );
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow: inset 0 1px 20px rgba(255, 255, 255, 0.05);
+}
+
+
+
+
+.logo-sos {
+    position: absolute;
+    left: 20px;
+    top: -4px;
+
+    z-index: 1000;
+
+    display: flex;
+    align-items: center;
+}
+
+.logo-sos img {
+    display: block;
+    width: 140px;
+    height: auto;
+}
+
+
+
+.menu-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 10px;
+    flex-wrap: wrap;
+
+    margin-left: auto;
+}
+
+nav a,
+.menu-links a {
+    margin: 0 10px;
+
+    color: rgba(0, 0, 0, 0.77) !important;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease,
+        transform 0.2s ease;
+}
+
+nav a:hover,
+.menu-links a:hover {
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+
+
+
+.acoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.botao01,
+.instagram {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    text-decoration: none;
+
+    transition: transform 0.2s ease;
+}
+
+.botao01 img,
+.instagram img {
+    display: block;
+
+    width: 32px;
+    height: 32px;
+
+    object-fit: contain;
+}
+
+.botao01:hover,
+.instagram:hover {
+    transform: scale(1.1);
+}
+
+
+
+header {
+    position: relative;
+
+    width: 100%;
+    min-height: 450px;
+    height: 75vh;
+
+    padding: 40px 10%;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+}
+
+header.banner {
+    position: relative;
+}
+
+
+
+.banner-image {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: 0;
+
+    /* Um pouco menos de zoom */
+    transform: scale(0.98);
+}
+
+
+
+.social-sidebar {
+    position: absolute;
+
+    left: 20px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 10;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar-link img {
+    width: 24px;
+    height: 24px;
+
+    object-fit: contain;
+
+    filter: brightness(0) invert(1);
+
+    opacity: 0.7;
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.sidebar-link img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+        
+}
+
+
+section {
+    padding: 50px 10%;
+}
+
+section h1 {
+    margin-bottom: 30px;
+
+    font-size: 2.2rem;
+    font-weight: 400;
+
+    color: #000;
+
+    text-align: center;
+}
+
+section p {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 1.05rem;
+    font-weight: 300;
+
+    line-height: 1.7;
+
+    color: #444;
+}
+
+section p strong {
+    font-weight: 500;
+}
+
+h2 {
+    margin-bottom: 30px;
+
+    color: #000;
+
+    text-align: center;
+}
+
+
+
+
+.cards {
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+
+    padding: 20px;
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    
+    font-size: 1.3rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+}
+
+
+.modelo-container {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.modelo-imagem {
+    display: block;
+
+    width: 90%;
+    max-width: 1000px;
+
+    height: auto;
+
+    border-radius: 10px;
+
+    object-fit: cover;
+}
+
+
+#contato {
+    text-align: center;
+    
+}
+
+.contato-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.contato-bloco {
+    flex: 1 1 220px;
+
+    min-width: 220px;
+
+    padding: 20px 25px;
+
+    background: #ffffff;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.1);
+
+    font-size: 1.15rem;
+
+    text-align: center;
+    
+}
+
+.contato-bloco img {
+    display: block;
+
+    width: 60px;
+    height: auto;
+
+    margin: 0 auto 15px;
+}
+
+.contato-bloco h3 {
+    margin-bottom: 8px;
+}
+
+
+
+
+.botao {
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background: #25D366;
+
+    color: #000000;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+
+.botao:hover {
+    background: #dbbc0ee3;
+
+    transform: translateY(-2px);
+}
+
+
+.horarios {
+    width: 90%;
+    max-width: 700px;
+
+    margin: 50px auto;
+
+    padding: 40px;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.10);
+}
+
+.horarios h2 {
+    margin-bottom: 30px;
+
+    font-size: 32px;
+
+    color: #333;
+
+    text-align: center;
+}
+
+.horario {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 22px 10px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.horario:last-child {
+    border-bottom: none;
+}
+
+.horario span {
+    font-size: 21px;
+}
+
+.horario strong {
+    font-size: 21px;
+
+    color: #222;
+}
+
+.horario.fechado strong {
+    color: #d9534f;
+}
+
+
+#endereco {
+    margin: 20px 10%;
+
+    padding: 30px 20px;
+
+    background: linear-gradient(
+        90deg,
+     rgba(228, 150, 5, 0.486) 0%,
+        rgba(255, 162, 0, 0.774) 50%,
+        rgba(197, 160, 89, 0.25) 100%
+    );
+
+    color: #000;
+
+    text-align: center;
+
+    border-radius: 12px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(207, 171, 9, 0.15);
+
+    box-shadow:
+        inset 0 1px 20px rgba(255, 196, 0, 0.253);
+}
+
+#endereco h1,
+#endereco h2,
+#endereco p {
+    color: #000;
+}
+
+.endereco-content {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 24px;
+
+    flex-wrap: wrap;
+
+    margin-top: 20px;
+}
+
+.endereco-info {
+    flex: 1 1 260px;
+
+    text-align: center;
+}
+
+#endereco .link-endereco {
+    display: inline-block;
+
+    color: #000;
+
+    text-decoration: none;
+}
+
+#endereco .link-endereco:hover {
+    color: #ffffff;
+}
+
+
+.logo-loja {
+    display: block;
+
+    margin: 0 auto 15px;
+}
+
+.logo-loja img {
+    display: block;
+
+    width: 120px;
+    height: auto;
+
+    margin: 0 auto;
+}
+
+
+#endereco iframe {
+    display: block;
+
+    width: 100%;
+    max-width: 420px;
+
+    height: 260px;
+
+    border: 0;
+
+    border-radius: 12px;
+}
+
+
+footer {
+    padding: 20px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(228, 150, 5, 0.486) 0%,
+        rgba(255, 162, 0, 0.774) 50%,
+        rgba(197, 160, 89, 0.25) 100%
+    );
+
+    color: #000;
+
+    text-align: center;
+}
+
+footer p {
+    color: #000;
+}
+
+
+@media (max-width: 768px) {
+
+    nav {
+        position: sticky;
+        top: 0;
+
+        flex-direction: row;
+        flex-wrap: nowrap;
+
+        justify-content: space-between;
+        align-items: center;
+
+        gap: 8px;
+
+        padding: 10px 12px;
+    }
+
+    .logo-sos {
+        position: relative;
+
+        top: auto;
+        left: auto;
+
+        margin: 0;
+
+        flex-shrink: 0;
+    }
+
+    .logo-sos img {
+        width: 70px;
+    }
+
+    .menu-links {
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: center;
+        align-items: center;
+
+        flex-wrap: wrap;
+
+        gap: 4px 8px;
+
+        width: auto;
+
+        margin: 0 auto;
+    }
+
+    nav a,
+    .menu-links a {
+        margin: 0;
+
+        font-size: 0.7rem;
+
+        letter-spacing: 0;
+    }
+
+
+    .acoes {
+        display: flex;
+
+        flex-direction: row;
+
+        justify-content: flex-end;
+        align-items: center;
+
+        width: auto;
+
+        margin: 0;
+
+        gap: 5px;
+
+        flex-shrink: 0;
+    }
+
+    .botao01,
+    .instagram {
+        width: 28px;
+        height: 28px;
+
+        margin: 0;
+    }
+
+    .botao01 img,
+    .instagram img {
+        width: 22px;
+        height: 22px;
+    }
+
+
+    header {
+        height: auto;
+
+        min-height: 350px;
+
+        padding: 40px 20px;
+    }
+
+    .banner-image {
+        transform: scale(0.98);
+    }
+
+    .content {
+        margin-left: 0;
+
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+
+        text-align: center;
+    }
+
+    header p {
+        font-size: 0.8rem;
+
+        letter-spacing: 2px;
+
+        text-align: center;
+    }
+
+    .social-sidebar {
+        display: none;
+    }
+
+    section {
+        padding: 40px 6%;
+    }
+
+    section h1 {
+        font-size: 1.8rem;
+    }
+
+
+    .cards {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+
+        max-width: 320px;
+    }
+
+    
+    .modelo-imagem {
+        width: 90%;
+
+        max-width: 320px;
+    }
+
+
+    .contato-container {
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .contato-bloco {
+        width: 100%;
+
+        max-width: 350px;
+    }
+
+
+    .horarios {
+        width: 100%;
+
+        padding: 25px 20px;
+    }
+
+    .horarios h2 {
+        font-size: 27px;
+    }
+
+    .horario {
+        padding: 18px 5px;
+    }
+
+    .horario span,
+    .horario strong {
+        font-size: 17px;
+    }
+
+    #endereco {
+        margin: 20px 6%;
+    }
+
+    .endereco-content {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    #endereco iframe {
+        max-width: 100%;
+
+        height: 220px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.7rem;
+
+        letter-spacing: 1.5px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+
+    nav {
+        padding: 8px;
+
+        gap: 4px;
+    }
+
+    nav a,
+    .menu-links a {
+        font-size: 0.62rem;
+
+        letter-spacing: 0;
+    }
+
+    .logo-sos img {
+        width: 60px;
+    }
+
+    .botao01,
+    .instagram {
+        width: 25px;
+        height: 25px;
+    }
+
+    .botao01 img,
+    .instagram img {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    
+
+    .modelo-imagem {
+        width: 95%;
+
+        max-width: 300px;
+    }
+
+
+    /* HORÁRIOS */
+
+    .horarios {
+        padding: 22px 15px;
+    }
+
+    .horarios h2 {
+        font-size: 24px;
+    }
+
+    .horario {
+        gap: 10px;
+    }
+
+    .horario span,
+    .horario strong {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 380px) {
+
+    nav {
+        gap: 3px;
+
+        padding: 7px;
+    }
+
+    nav a,
+    .menu-links a {
+        font-size: 0.55rem;
+
+        letter-spacing: 0;
+    }
+
+    .logo-sos img {
+        width: 55px;
+    }
+
+    .acoes {
+        gap: 2px;
+    }
+
+    .botao01 img,
+    .instagram img {
+        width: 18px;
+        height: 18px;
+    }
+
+    header h1 {
+        font-size: 1.35rem;
+    }
+}
