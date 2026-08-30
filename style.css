@@ -1,0 +1,1113 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Esconde visualmente mas mantém acessível para leitores de tela e Google */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+body {
+    background: #f8f4f0;
+    color: #333;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+nav a {
+    font-family: 'Montserrat', sans-serif;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+
+    background: linear-gradient(
+        90deg,
+         rgba(228, 150, 5, 0.486) 0%,
+        rgba(255, 162, 0, 0.774) 50%,
+        rgba(197, 160, 89, 0.25) 100%
+    );
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    box-shadow: inset 0 1px 20px rgba(255, 255, 255, 0.05);
+}
+
+.nav-inner {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 15px;
+    padding: 20px;
+}
+
+.logo-sos {
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+}
+
+.logo-sos img {
+    display: block;
+    width: 140px;
+    height: auto;
+}
+
+.menu-links {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    gap: 10px;
+    flex-wrap: wrap;
+
+    margin-left: auto;
+}
+
+nav a,
+.menu-links a {
+    margin: 0 10px;
+
+    color: rgba(0, 0, 0, 0.77) !important;
+
+    text-decoration: none;
+    font-weight: 600;
+
+    transition:
+        color 0.3s ease,
+        transform 0.2s ease;
+}
+
+nav a:hover,
+.menu-links a:hover {
+    color: #fff !important;
+    transform: translateY(-2px);
+}
+
+
+.acoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+}
+
+.botao01,
+.instagram {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    text-decoration: none;
+
+    transition: transform 0.2s ease;
+}
+
+.botao01 img,
+.instagram img {
+    display: block;
+
+    width: 32px;
+    height: 32px;
+
+    object-fit: contain;
+}
+
+.botao01:hover,
+.instagram:hover {
+    transform: scale(1.1);
+}
+
+
+section {
+    padding: 50px 10%;
+
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-title {
+    margin-bottom: 30px;
+
+    font-size: 2.2rem;
+    font-weight: 400;
+
+    color: #000;
+
+    text-align: center;
+}
+
+section p {
+    font-family: 'Montserrat', sans-serif;
+
+    font-size: 1.05rem;
+    font-weight: 300;
+
+    line-height: 1.7;
+
+    color: #444;
+}
+
+section p strong {
+    font-weight: 500;
+}
+
+h2 {
+    margin-bottom: 30px;
+
+    color: #000;
+
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+
+    padding: 20px;
+
+    background: #fff;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.1);
+
+    text-align: center;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    
+    font-size: 1.3rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+}
+
+
+.modelo-container {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+.modelo-imagem {
+    display: block;
+
+    width: 90%;
+    max-width: 1000px;
+
+    height: auto;
+
+    border-radius: 10px;
+
+    object-fit: cover;
+}
+
+
+#contato {
+    text-align: center;
+    
+}
+
+.contato-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+.contato-bloco {
+    flex: 1 1 220px;
+
+    min-width: 220px;
+
+    padding: 20px 25px;
+
+    background: linear-gradient(
+        90deg,
+     rgba(228, 150, 5, 0.486) 0%,
+        rgba(255, 162, 0, 0.774) 50%,
+        rgba(197, 160, 89, 0.25) 100%
+    );
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 10px rgba(0, 0, 0, 0.1);
+
+    font-size: 1.15rem;
+
+    text-align: center;
+    
+}
+
+.contato-bloco img {
+    display: block;
+
+    width: 60px;
+    height: auto;
+
+    margin: 0 auto 15px;
+}
+
+.contato-bloco h3 {
+    margin-bottom: 8px;
+}
+
+.contato-bloco {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+.botao {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #25D366;
+    color: #000000;
+    border-radius: 15px;
+    text-decoration: none;
+    font-weight: bold;
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease;
+}
+
+.botao:hover {
+    background: #dbbc0ee3;
+
+    transform: translateY(-2px);
+}
+
+
+.horarios {
+    width: 90%;
+    max-width: 700px;
+
+    margin: 50px auto;
+
+    padding: 40px;
+
+    background: #fff;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.10);
+}
+
+.horarios h2 {
+    margin-bottom: 30px;
+
+    font-size: 32px;
+
+    color: #333;
+
+    text-align: center;
+}
+
+.horario {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 22px 10px;
+
+    border-bottom: 1px solid #eee;
+}
+
+.horario:last-child {
+    border-bottom: none;
+}
+
+.horario span {
+    font-size: 21px;
+}
+
+.horario strong {
+    font-size: 21px;
+
+    color: #222;
+}
+
+.horario.fechado strong {
+    color: #d9534f;
+}
+
+#endereco {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 30px 40px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(228, 150, 5, 0.486) 0%,
+        rgba(255, 162, 0, 0.774) 50%,
+        rgba(197, 160, 89, 0.25) 100%
+    );
+
+    color: #000;
+    text-align: center;
+    border-radius: 12px;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(207, 171, 9, 0.15);
+
+    box-shadow:
+        inset 0 1px 20px rgba(255, 196, 0, 0.253);
+}
+
+#endereco h1,
+#endereco h2,
+#endereco p {
+    color: #000;
+}
+
+.endereco-content {
+    display: grid;
+    grid-template-columns: minmax(240px, 1fr) minmax(320px, 420px);
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.endereco-info {
+    width: 100%;
+    text-align: center;
+}
+
+#endereco .link-endereco {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+}
+
+#endereco .link-endereco:hover {
+    color: #ffffff;
+}
+
+.logo-loja {
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.logo-loja img {
+    display: block;
+    width: 120px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.mapa-container {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+#endereco iframe {
+    display: block;
+    width: 100%;
+    height: 260px;
+    border: 0;
+    border-radius: 12px;
+}
+
+footer {
+    padding: 20px;
+
+    background: linear-gradient(
+        90deg,
+        rgba(228, 150, 5, 0.486) 0%,
+        rgba(255, 162, 0, 0.774) 50%,
+        rgba(197, 160, 89, 0.25) 100%
+    );
+
+    color: #000;
+
+    text-align: center;
+}
+
+footer p {
+    color: #000;
+}
+
+
+/*REPONSIVIDADE*/
+
+@media (max-width: 1024px) {
+
+    .nav-inner {
+        padding: 14px 20px;
+        gap: 10px;
+    }
+
+    .logo-sos img {
+        width: 105px;
+    }
+
+    .menu-links {
+        gap: 5px;
+    }
+
+    nav a,
+    .menu-links a {
+        margin: 0 5px;
+        font-size: 0.85rem;
+    }
+
+
+    section {
+        padding: 45px 6%;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .modelo-imagem {
+        width: 100%;
+        max-width: 900px;
+    }
+
+    .contato-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contato-bloco {
+        min-width: 0;
+    }
+
+    #endereco {
+        width: 92%;
+        margin: 20px auto;
+    }
+}
+
+/* Celulares e tablets pequenos */
+@media (max-width: 768px) {
+
+    /*  NAVBAR  */
+
+    nav {
+        position: sticky;
+        top: 0;
+        min-height: 58px;
+        overflow: visible;
+    }
+
+    .nav-inner {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 8px;
+        padding: 8px 10px;
+    }
+
+    .logo-sos {
+        display: flex;
+        align-items: center;
+
+        flex: 0 0 auto;
+        margin: 0;
+    }
+
+    .logo-sos img {
+        width: clamp(58px, 15vw, 78px);
+        max-width: 100%;
+        height: auto;
+    }
+
+    .menu-links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex: 1 1 auto;
+        min-width: 0;
+
+        gap: clamp(3px, 1.5vw, 10px);
+        margin: 0;
+
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+
+        padding: 2px 0;
+    }
+
+    .menu-links::-webkit-scrollbar {
+        display: none;
+    }
+
+    nav a,
+    .menu-links a {
+        flex: 0 0 auto;
+
+        margin: 0;
+        padding: 5px 3px;
+
+        font-size: clamp(0.62rem, 2vw, 0.78rem);
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+
+    .acoes {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        flex: 0 0 auto;
+        gap: 4px;
+        margin: 0;
+    }
+
+    .botao01,
+    .instagram {
+        width: clamp(27px, 7vw, 34px);
+        height: clamp(27px, 7vw, 34px);
+    }
+
+    .botao01 img,
+    .instagram img {
+        width: clamp(19px, 5vw, 25px);
+        height: clamp(19px, 5vw, 25px);
+    }
+
+
+    /*  SEÇÕES  */
+
+    section {
+        width: 100%;
+        padding: clamp(35px, 7vw, 55px) 5%;
+    }
+
+    .section-title {
+        margin-bottom: 22px;
+        font-size: clamp(1.65rem, 6vw, 2.2rem);
+        line-height: 1.15;
+    }
+
+    section p {
+        font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+        line-height: 1.65;
+    }
+
+    h2 {
+        margin-bottom: 22px;
+        font-size: clamp(1.35rem, 5vw, 1.8rem);
+    }
+
+
+    /*  CARDS  */
+
+    .cards {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+
+        width: 100%;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 420px;
+        margin: 0 auto;
+
+        padding: clamp(18px, 5vw, 25px);
+    }
+
+    .card h2 {
+        font-size: clamp(1.2rem, 4vw, 1.4rem);
+    }
+
+    .card p {
+        font-size: clamp(0.88rem, 2.5vw, 0.95rem);
+    }
+
+
+    /* MODELOS */
+
+    .modelo-container {
+        width: 100%;
+    }
+
+    .modelo-imagem {
+        display: block;
+
+        width: 100%;
+        max-width: 650px;
+        height: auto;
+
+        border-radius: 10px;
+        object-fit: contain;
+    }
+
+
+    /*  CONTATO  */
+
+    .contato-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+
+        width: 100%;
+    }
+
+    .contato-bloco {
+        width: 100%;
+        min-width: 0;
+        max-width: 500px;
+
+        margin: 0 auto;
+        padding: 22px 18px;
+    }
+
+    .contato-bloco img {
+        width: clamp(50px, 15vw, 65px);
+    }
+
+    .botao {
+        max-width: 100%;
+        padding: 12px 20px;
+    }
+
+
+    /*  HORÁRIOS  */
+
+    .horarios {
+        width: 100%;
+        max-width: 700px;
+
+        margin: 35px auto;
+        padding: clamp(20px, 5vw, 35px) clamp(15px, 5vw, 30px);
+
+        border-radius: 16px;
+    }
+
+    .horarios h2 {
+        margin-bottom: 20px;
+        font-size: clamp(1.4rem, 6vw, 2rem);
+    }
+
+    .horario {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 10px;
+        padding: 15px 3px;
+    }
+
+    .horario span,
+    .horario strong {
+        font-size: clamp(0.88rem, 3.5vw, 1.05rem);
+    }
+
+    .horario span {
+        text-align: left;
+    }
+
+    .horario strong {
+        text-align: right;
+    }
+
+
+    /*  ENDEREÇO  */
+
+    #endereco {
+        margin: 20px 5%;
+        padding: clamp(22px, 5vw, 30px) 15px;
+
+        border-radius: 12px;
+    }
+
+    .endereco-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 20px;
+        margin-top: 15px;
+    }
+
+    .endereco-info {
+        width: 100%;
+        flex: none;
+    }
+
+    .logo-loja img {
+        width: clamp(90px, 25vw, 120px);
+    }
+
+    .mapa-container {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    #endereco iframe {
+        width: 100%;
+        max-width: 600px;
+        height: clamp(220px, 55vw, 300px);
+    }
+
+
+    /* FOOTER  */
+
+    footer {
+        padding: 18px 12px;
+    }
+
+    footer p {
+        font-size: clamp(0.75rem, 2.5vw, 0.9rem);
+        line-height: 1.5;
+    }
+}
+
+
+/* Celulares */
+@media (max-width: 480px) {
+
+    /* Ajuste fino para celulares */
+
+    nav {
+        min-height: 54px;
+    }
+
+    .nav-inner {
+        padding: 7px 8px;
+    }
+
+    .logo-sos img {
+        width: 58px;
+    }
+
+    .menu-links {
+        gap: 2px 5px;
+    }
+
+    nav a,
+    .menu-links a {
+        font-size: 0.62rem;
+        padding: 4px 2px;
+    }
+
+    .acoes {
+        gap: 2px;
+    }
+
+    .botao01,
+    .instagram {
+        width: 26px;
+        height: 26px;
+    }
+
+    .botao01 img,
+    .instagram img {
+        width: 19px;
+        height: 19px;
+    }
+
+
+    section {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .card {
+        padding: 18px 15px;
+    }
+
+    .contato-bloco {
+        padding: 20px 15px;
+    }
+
+    .horario {
+        gap: 8px;
+        padding: 13px 0;
+    }
+
+    .horario span,
+    .horario strong {
+        font-size: 0.86rem;
+    }
+
+    #endereco {
+        width: 94%;
+        margin: 20px auto;
+        padding: 25px 14px;
+    }
+
+    .endereco-content {
+        gap: 18px;
+    }
+
+    .mapa-container {
+        max-width: 100%;
+    }
+
+    #endereco iframe {
+        height: 230px;
+    }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 380px) {
+
+
+    .nav-inner {
+        padding: 6px;
+    }
+
+    .logo-sos img {
+        width: 52px;
+    }
+
+    .menu-links {
+        gap: 1px 3px;
+    }
+
+    nav a,
+    .menu-links a {
+        font-size: 0.56rem;
+    }
+
+    .acoes {
+        gap: 1px;
+    }
+
+    .botao01,
+    .instagram {
+        width: 24px;
+        height: 24px;
+    }
+
+    .botao01 img,
+    .instagram img {
+        width: 17px;
+        height: 17px;
+    }
+
+
+    .horario span,
+    .horario strong {
+        font-size: 0.78rem;
+    }
+
+    #endereco iframe {
+        height: 210px;
+    }
+}
+
+
+/* Evita que imagens e elementos ultrapassem a tela */
+img,
+iframe {
+    max-width: 100%;
+}
+
+body {
+    overflow-x: clip;
+}
+
+
+/* Acessibilidade: reduz animações quando solicitado */
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}
+
+/* ==================== TELEFONE ==================== */
+#contato .contato-bloco a.telefone,
+#contato .contato-bloco a.telefone:visited,
+#contato .contato-bloco a.telefone:hover,
+#contato .contato-bloco a.telefone:active {
+    color: #000 !important;
+    -webkit-text-fill-color: #000 !important;
+    text-decoration: none;
+    text-decoration-color: #000 !important;
+}
+/* Remove o azul padrão do link do telefone */
+a.telefone,
+a.telefone:visited,
+a.telefone:hover,
+a.telefone:active {
+    color: inherit; /* Mantém a mesma cor do texto pai */
+    text-decoration: none; /* Remove o sublinhado, se houver */
+}
+
+
+/* ==================== BOTÃO VOLTAR AO TOPO ==================== */
+#btn-topo {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 1000;
+
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        rgba(255, 162, 0, 0.95) 0%,
+        rgba(197, 160, 89, 0.95) 100%
+    );
+
+    color: #fff;
+    font-size: 1.4rem;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+
+    /* Escondido por padrão */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease,
+        background 0.3s ease;
+}
+
+/* Classe adicionada via JS quando o usuário rola a página */
+#btn-topo.mostrar {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+#btn-topo:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 162, 0, 1) 0%,
+        rgba(197, 160, 89, 1) 100%
+    );
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    #btn-topo {
+        right: 16px;
+        bottom: 16px;
+        width: 42px;
+        height: 42px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #btn-topo {
+        transition: opacity 0.01ms, visibility 0.01ms;
+    }
+}
