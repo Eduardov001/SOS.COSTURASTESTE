@@ -61,17 +61,22 @@
 
     <nav id="inicio">
         <div class="nav-inner">
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="menuDropdown"
+            >
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+                <span class="menu-toggle-bar"></span>
+            </button>
+
             <div class="logo-sos">
                 <a href="#inicio" id="logo">
                     <img src="logo-sos.png" alt="Logo SOS">
                 </a>
-            </div>
-
-            <div class="menu-links">
-                <a href="#servicos">Serviços</a>
-                <a href="#contato">Contato</a>
-                <a href="#horarios">Horários</a>
-                <a href="#endereco">Endereço</a>
             </div>
 
             <div class="acoes">
@@ -98,7 +103,31 @@
         </div>
     </nav>
 
- 
+    <div class="menu-backdrop" id="menuBackdrop"></div>
+
+    <aside class="menu-dropdown" id="menuDropdown" aria-hidden="true">
+        <div class="menu-dropdown-header">
+            <span class="menu-dropdown-title">Menu</span>
+            <button class="menu-close" id="menuClose" aria-label="Fechar menu">&times;</button>
+        </div>
+
+        <nav class="menu-dropdown-links">
+            <a href="#servicos"><span class="menu-icon">🧵</span> Serviços</a>
+            <a href="#contato"><span class="menu-icon">📞</span> Contato</a>
+            <a href="#horarios"><span class="menu-icon">🕐</span> Horários</a>
+            <a href="#endereco"><span class="menu-icon">📍</span> Endereço</a>
+        </nav>
+
+        <div class="menu-dropdown-footer">
+            <a
+                href="https://api.whatsapp.com/send?phone=5519994192178"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                Fale conosco no WhatsApp
+            </a>
+        </div>
+    </aside>
 
     <section id="servicos">
         <h2 class="section-title">Nossos Serviços</h2>
@@ -176,7 +205,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    <h3>Falar no WhatsApp</h3>
+                    <h3>Fale conosco no WhatsApp</h3>
                 </a>
             </div>
         </div>
@@ -187,7 +216,7 @@
 
         <div class="horario">
             <span>Segunda a Sexta</span>
-            <strong>08:00 às 18:00</strong>
+            <strong>09:00 às 18:00</strong>
         </div>
 
         <div class="horario">
